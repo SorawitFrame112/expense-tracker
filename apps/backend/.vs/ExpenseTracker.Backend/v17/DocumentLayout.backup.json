@@ -1,0 +1,56 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\user\\Desktop\\New folder\\expense-tracker\\apps\\backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{78066E2D-A97C-4EF4-A4D0-7D2A1BE342F6}|..\\ExpenseTracker.infrastructure\\ExpenseTracker.infrastructure.csproj|c:\\users\\user\\desktop\\new folder\\expense-tracker\\apps\\expensetracker.infrastructure\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AC874EA-4A07-4D69-BC53-EF372C9BDDEF}|..\\Domain\\Domain.csproj|c:\\users\\user\\desktop\\new folder\\expense-tracker\\apps\\domain\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\New folder\\expense-tracker\\apps\\ExpenseTracker.infrastructure\\Program.cs",
+              "RelativeDocumentMoniker": "..\\ExpenseTracker.infrastructure\\Program.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\New folder\\expense-tracker\\apps\\ExpenseTracker.infrastructure\\Program.cs",
+              "RelativeToolTip": "..\\ExpenseTracker.infrastructure\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T16:35:16.645Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\New folder\\expense-tracker\\apps\\Domain\\Program.cs",
+              "RelativeDocumentMoniker": "..\\Domain\\Program.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\New folder\\expense-tracker\\apps\\Domain\\Program.cs",
+              "RelativeToolTip": "..\\Domain\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T16:33:15.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

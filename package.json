@@ -2,7 +2,9 @@
   "name": "@expense-tracker/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "prepare": "nx g @nx-dotnet/core:restore"
+  },
   "private": true,
   "dependencies": {
     "@angular-devkit/build-angular": "~20.2.0",
@@ -27,6 +29,7 @@
     "@angular/compiler-cli": "~20.2.0",
     "@angular/language-service": "~20.2.0",
     "@eslint/js": "^9.8.0",
+    "@nx-dotnet/core": "^3.0.2",
     "@nx/angular": "21.5.2",
     "@nx/devkit": "21.5.2",
     "@nx/eslint": "21.5.2",
@@ -36,6 +39,7 @@
     "@nx/playwright": "21.5.2",
     "@nx/web": "21.5.2",
     "@nx/workspace": "21.5.2",
+    "@openapitools/openapi-generator-cli": "^2.13.4",
     "@playwright/test": "^1.36.0",
     "@schematics/angular": "~20.2.0",
     "@swc-node/register": "~1.9.1",
@@ -53,6 +57,7 @@
     "jest-environment-jsdom": "^30.0.2",
     "jest-preset-angular": "~15.0.0",
     "jest-util": "^30.0.2",
+    "jsonc-eslint-parser": "^2.1.0",
     "nx": "21.5.2",
     "prettier": "^2.6.2",
     "ts-jest": "^29.4.0",
