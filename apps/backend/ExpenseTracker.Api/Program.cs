@@ -1,11 +1,22 @@
 
+using ExpenseTracker.Application.MappingProfile;
 using ExpenseTracker.Application.Service;
+using ExpenseTracker.Application.Validator;
 using ExpenseTracker.Infrastructure.Context;
 using ExpenseTracker.Infrastructure.Repository;
-using Microsoft.OpenApi.Models;
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddAutoMapper(typeof(MappingProfile));
+
+//  Add Fulent validator
+builder.Services.AddValidatorsFromAssemblyContaining<ExpenseValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<CategoryValidator>();
+builder.Services.AddFluentValidationAutoValidation();
+
 
 // Add services to the container.
 builder.Services.AddControllers();
@@ -24,7 +35,7 @@ builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IExpenseRepository, ExpenseRepository>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IExpenseService, ExpenseService>();
-
+builder.Services.AddScoped(typeof(IShareRepository<>), typeof(ShareRepository<>));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

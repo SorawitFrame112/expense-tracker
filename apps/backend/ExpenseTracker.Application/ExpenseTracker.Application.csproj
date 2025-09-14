@@ -12,4 +12,17 @@
     <ProjectReference Include="..\Infrastructure.Domain\Infrastructure.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Dtos\Request\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="MapperProfile\MappingProfile.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="FluentValidation" Version="12.0.0" />
+  </ItemGroup>
+
 </Project>

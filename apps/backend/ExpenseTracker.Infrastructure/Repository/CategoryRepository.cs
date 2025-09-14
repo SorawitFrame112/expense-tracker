@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ExpenseTracker.Infrastructure.Repository
 {
-  public class CategoryRepository: ICategoryRepository
+  public class CategoryRepository : ICategoryRepository
   {
     private readonly ExpenseTrackerDbContext _context;
 
@@ -13,13 +13,22 @@ namespace ExpenseTracker.Infrastructure.Repository
       _context = context;
     }
 
-    public async Task<List<Category>> GetAllAsync() => await _context.Categories.ToListAsync();
-    public async Task<Category> GetByIdAsync(int id) => await _context.Categories.FirstOrDefaultAsync(c => c.Id == id);
+    public async Task<List<Category>> GetAllAsync() =>
+        await _context.Categories
+            .AsNoTracking()
+            .ToListAsync();
+
+    public async Task<Category> GetByIdAsync(int id) =>
+        await _context.Categories
+            .AsNoTracking()
+            .FirstOrDefaultAsync(c => c.Id == id);
+
     public async Task CreateAsync(Category category)
     {
       await _context.Categories.AddAsync(category);
       await _context.SaveChangesAsync();
     }
+
     public async Task UpdateAsync(int id, Category categoryIn)
     {
       var category = await _context.Categories.FindAsync(id);
@@ -29,6 +38,7 @@ namespace ExpenseTracker.Infrastructure.Repository
         await _context.SaveChangesAsync();
       }
     }
+
     public async Task RemoveAsync(int id)
     {
       var category = await _context.Categories.FindAsync(id);
@@ -38,5 +48,8 @@ namespace ExpenseTracker.Infrastructure.Repository
         await _context.SaveChangesAsync();
       }
     }
+
+    public IQueryable<Category> GetQueryable() =>
+        _context.Categories.AsNoTracking();
   }
 }
