@@ -39,14 +39,13 @@ builder.Services.AddScoped(typeof(IShareRepository<>), typeof(ShareRepository<>)
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
+
   app.UseSwagger();
   app.UseSwaggerUI(c =>
   {
     c.SwaggerEndpoint("/swagger/v1/swagger.json", "Expense Tracker API V1");
   });
-}
+
 
 app.UseHttpsRedirection();
 
